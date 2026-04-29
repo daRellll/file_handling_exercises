@@ -10,3 +10,5 @@ elif len(numbers) < 20:
 else:
     print(f"Error! {len(numbers)} is too little! Add more numbers in numbers.txt file to continue")
 
+odd_numbers = []
+even_numbers = []
