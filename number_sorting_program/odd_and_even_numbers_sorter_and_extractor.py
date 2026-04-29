@@ -19,6 +19,6 @@ for number in numbers:
     else:
         odd_numbers.append(number)
 
-with open("odd.txt", "r") as odd_number_file:
+with open("odd.txt", "w") as odd_number_file:
 
-with open("even.txt", "r") as even_number_file:
+with open("even.txt", "w") as even_number_file:
