@@ -20,5 +20,8 @@ for number in numbers:
         odd_numbers.append(number)
 
 with open("odd.txt", "w") as odd_number_file:
-
+    for number in odd_numbers:
+        odd_number_file.write(f"{number}\n")
 with open("even.txt", "w") as even_number_file:
+    for number in even_numbers:
+        even_number_file.write(f"{number}\n")
