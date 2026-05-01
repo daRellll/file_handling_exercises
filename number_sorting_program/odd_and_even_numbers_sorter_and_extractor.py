@@ -30,8 +30,13 @@ class OddAndEvenNumbersSorter:
         with open("odd.txt", "w") as odd_number_file:
             for number in self.odd_numbers:
                 odd_number_file.write(f"{number}\n")
-    
+
     def even_numbers_file_data_encoder(self):
         with open("even.txt", "w") as even_number_file:
             for number in self.even_numbers:
                 even_number_file.write(f"{number}\n")
+
+numbers_sorter = OddAndEvenNumbersSorter("numbers.txt")
+numbers_sorter.odd_and_even_numbers_sorter()
+numbers_sorter.odd_numbers_file_data_encoder()
+numbers_sorter.even_numbers_file_data_encoder()
