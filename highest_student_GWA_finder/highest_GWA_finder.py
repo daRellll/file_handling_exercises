@@ -20,3 +20,4 @@ class GWAAnalyzer:
 
 analyzer = GWAAnalyzer("student_GWA_list.txt")
 analyzer.file_data_loader()
+analyzer.top_student_output()
