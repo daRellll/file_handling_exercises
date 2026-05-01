@@ -1,14 +1,14 @@
 class OddAndEvenNumbersSorter:
     def __init__(self, numbers_file):
         self.numbers_file = numbers_file
+        self.numbers = []
+        self.odd_numbers = []
+        self.even_numbers = []
 
-with open("numbers.txt", "r") as number_file:
-    numbers = []
-    for line in number_file:
-        numbers.append(int(line.strip()))
-
-odd_numbers = []
-even_numbers = []
+    def numbers_file_data_loader(self):
+        with open(self.numbers_file, "r") as number_file:
+            for line in number_file:
+                self.numbers.append(int(line.strip()))
 
 if len(numbers) == 20:
     print(f"\033[92mConfirmed! \033[0m{len(numbers)} numbers are in the file, now sorting...")
