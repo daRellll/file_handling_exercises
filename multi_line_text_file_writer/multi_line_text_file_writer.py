@@ -11,3 +11,5 @@ my_life_file = MyLifeWriter("my_life.txt")
 
 while True:
     my_life_file.write_line()
+
+    user_response = input("Do you want to continue? (y/n): ")
