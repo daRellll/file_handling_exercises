@@ -30,11 +30,11 @@ class OddAndEvenNumbersSorterAndTransformer:
     def odd_and_even_integers_transformer(self):
         for number in self.odd_integers:
             cubed_integer = number ** 3
-            self.even_integers.append(cubed_integer)
+            self.cubed_odd_integers.append(cubed_integer)
 
         for number in self.even_integers:
             squared_integer = number ** 2
-            self.even_integers.append(squared_integer)
+            self.squared_even_integers.append(squared_integer)
 
     def odd_integers_file_data_encoder(self):
         with open("triple.txt", "w") as odd_integers_file:
