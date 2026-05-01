@@ -14,4 +14,9 @@ class GWAAnalyzer:
           student_name, GWA = top_student
           return student_name, GWA
 
-print(f"The top student is \033[33m{student_name}\033[0m with a GWA of \033[94m{GWA}\033[0m!")
+    def top_student_output(self):
+         student_name, GWA = self.top_student_finder()
+         print(f"The top student is \033[33m{student_name}\033[0m with a GWA of \033[94m{GWA}\033[0m!")
+
+analyzer = GWAAnalyzer("student_GWA_list.txt")
+analyzer.file_data_loader()
