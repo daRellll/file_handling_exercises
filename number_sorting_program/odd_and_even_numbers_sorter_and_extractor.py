@@ -37,6 +37,7 @@ class OddAndEvenNumbersSorter:
                 even_number_file.write(f"{number}\n")
 
 numbers_sorter = OddAndEvenNumbersSorter("numbers.txt")
+numbers_sorter.numbers_file_data_loader()
 numbers_sorter.odd_and_even_numbers_sorter()
 numbers_sorter.odd_numbers_file_data_encoder()
 numbers_sorter.even_numbers_file_data_encoder()
