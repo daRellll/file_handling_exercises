@@ -1,13 +1,13 @@
 class MyLifeWriter:
-    def __init__(self, file_name):
+    def __init__(self, file_name, text_input):
         self.file_name = file_name
+        self.text_input = text_input
 
-    def write_line(self, text):
+    def write_line(self):
         with open(self.file_name, 'a') as file:
-            text = input("Enter line: ")
-            file.write(text + "\n")
+            file.write(self.text_input + "\n")
 
-my_life_file = MyLifeWriter("my_life.txt")
+my_life_file = MyLifeWriter("my_life.txt", input("Enter line: "))
 
 while True:
     my_life_file.write_line()
