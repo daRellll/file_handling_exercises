@@ -7,9 +7,10 @@ class MyLifeWriter:
         with open(self.file_name, 'a') as file:
             file.write(self.text_input + "\n")
 
-my_life_file = MyLifeWriter("my_life.txt", input("Enter line: "))
+
 
 while True:
+    my_life_file = MyLifeWriter("mylife.txt", input("Enter line: "))
     my_life_file.write_line()
 
     user_response = input("Do you want to continue? (y/n): ")
