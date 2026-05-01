@@ -10,4 +10,11 @@ class OddAndEvenNumbersSorterAndTransformer:
             for line in integers_file:
                 self.numbers.append(int(line.strip()))
 
-    
+    def odd_and_even_numbers_sorter(self):
+        if len(self.numbers) == 20:
+            print(f"\033[92mConfirmed! \033[0m{len(self.numbers)} numbers are in the file, now sorting...")
+            for number in self.numbers:
+                if number % 2 == 0:
+                    self.even_numbers.append(number)
+                else:
+                    self.odd_numbers.append(number)
