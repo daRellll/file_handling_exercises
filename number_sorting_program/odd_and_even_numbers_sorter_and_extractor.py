@@ -26,10 +26,11 @@ class OddAndEvenNumbersSorter:
             print(
                 f"\033[91mError! \033[0m{len(self.numbers)} numbers is too little! Add more numbers in numbers.txt file to continue")
 
+    def odd_numbers_file_data_encoder(self):
+        with open("odd.txt", "w") as odd_number_file:
+            for number in self.odd_numbers:
+                odd_number_file.write(f"{number}\n")
 
-with open("odd.txt", "w") as odd_number_file:
-    for number in odd_numbers:
-        odd_number_file.write(f"{number}\n")
 with open("even.txt", "w") as even_number_file:
     for number in even_numbers:
         even_number_file.write(f"{number}\n")
