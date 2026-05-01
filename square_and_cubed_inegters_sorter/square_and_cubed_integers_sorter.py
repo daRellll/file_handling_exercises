@@ -46,3 +46,9 @@ class OddAndEvenNumbersSorterAndTransformer:
             for number in self.squared_even_integers:
                 even_integers_file.write(f"{number}\n")
 
+integers_transformer = OddAndEvenNumbersSorterAndTransformer("integers_file.txt")
+integers_transformer.integers_file_data_loader()
+integers_transformer.odd_and_even_integers_sorter()
+integers_transformer.odd_and_even_integers_transformer()
+integers_transformer.odd_integers_file_data_encoder()
+integers_transformer.even_integers_file_data_encoder()
