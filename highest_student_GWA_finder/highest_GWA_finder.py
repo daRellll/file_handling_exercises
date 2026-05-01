@@ -1,4 +1,7 @@
-student_and_GWA_list = []
+class GWAAnalyzer:
+    def __init__(self, file_name):
+        self.file_name = file_name
+        student_and_GWA_list = []
 
 with open("student_GWA_list.txt", "r") as student_GWA_file:
      for line in student_GWA_file:
@@ -8,4 +11,4 @@ with open("student_GWA_list.txt", "r") as student_GWA_file:
 top_student = min(student_and_GWA_list, key=lambda x: x[1])
 student_name, GWA = top_student
 
-print(f"The top student is {student_name} with a GWA of {GWA}!")
+print(f"The top student is \033[33m{student_name}\033[0m with a GWA of \033[94m{GWA}\033[0m!")
