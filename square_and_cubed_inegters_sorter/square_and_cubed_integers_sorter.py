@@ -4,13 +4,15 @@ class OddAndEvenNumbersSorterAndTransformer:
         self.integers = []
         self.odd_integers = []
         self.even_integers = []
+        self.squared_even_integers = []
+        self.cubed_odd_integers = []
 
     def integers_file_data_loader(self):
         with open(self.integers_file) as integers_file:
             for line in integers_file:
                 self.integers.append(int(line.strip()))
 
-    def odd_and_even_numbers_sorter(self):
+    def odd_and_even_integers_sorter(self):
         if len(self.integers) == 20:
             print(f"\033[92mConfirmed! \033[0m{len(self.integers)} numbers are in the file, now sorting...")
             for number in self.integers:
@@ -25,6 +27,17 @@ class OddAndEvenNumbersSorterAndTransformer:
             print(
                 f"\033[91mError! \033[0m{len(self.integers)} numbers is too little! Add more numbers in numbers.txt file to continue")
 
-    def odd_and_even_numbers_transformer(self):
-        squared_even_integers = [self.even_integers ** 2 for number in self.integers]
-        cubed_odd_integers = [self.odd_integers ** 3 for number in self.integers]
+    def odd_and_even_integers_transformer(self):
+        for number in self.odd_integers:
+            cubed_integer = number ** 3
+            self.even_integers.append(cubed_integer)
+
+        for number in self.even_integers:
+            squared_integer = number ** 2
+            self.even_integers.append(squared_integer)
+
+    def odd_integers_file_data_encoder(self):
+        with open("triple.txt", "w") as odd_integers_file:
+            for number in self.cubed_odd_integers:
+                odd_integers_file.write(f"{number}\n")
+
