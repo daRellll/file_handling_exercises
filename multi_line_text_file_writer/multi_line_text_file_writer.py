@@ -3,4 +3,4 @@ class MyLifeWriter:
         self.file_name = file_name
 
     def user_write(self, text):
-        
+        with open(self.file_name, 'a') as file:
