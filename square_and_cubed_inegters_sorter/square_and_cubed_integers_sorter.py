@@ -18,3 +18,9 @@ class OddAndEvenNumbersSorterAndTransformer:
                     self.even_numbers.append(number)
                 else:
                     self.odd_numbers.append(number)
+        elif len(self.numbers) > 20:
+            print(
+                f"\033[91mError! \033[0m{len(self.numbers)} numbers is too much! Delete some lines in numbers.txt file to continue")
+        else:
+            print(
+                f"\033[91mError! \033[0m{len(self.numbers)} numbers is too little! Add more numbers in numbers.txt file to continue")
