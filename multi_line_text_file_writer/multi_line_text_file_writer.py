@@ -6,3 +6,5 @@ class MyLifeWriter:
         with open(self.file_name, 'a') as file:
             text = input("Enter line: ")
             file.write(text + "\n")
+
+my_life_file = MyLifeWriter("my_life.txt")
