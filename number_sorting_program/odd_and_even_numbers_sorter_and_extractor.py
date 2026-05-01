@@ -1,3 +1,7 @@
+class OddAndEvenNumbersSorter:
+    def __init__(self, numbers_file):
+        self.numbers_file = numbers_file
+
 with open("numbers.txt", "r") as number_file:
     numbers = []
     for line in number_file:
