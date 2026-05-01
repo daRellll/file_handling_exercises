@@ -41,3 +41,8 @@ class OddAndEvenNumbersSorterAndTransformer:
             for number in self.cubed_odd_integers:
                 odd_integers_file.write(f"{number}\n")
 
+    def even_integers_file_data_encoder(self):
+        with open("double.txt", "w") as even_integers_file:
+            for number in self.squared_even_integers:
+                even_integers_file.write(f"{number}\n")
+
