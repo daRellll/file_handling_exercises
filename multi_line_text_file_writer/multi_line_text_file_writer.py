@@ -8,3 +8,6 @@ class MyLifeWriter:
             file.write(text + "\n")
 
 my_life_file = MyLifeWriter("my_life.txt")
+
+while True:
+    
