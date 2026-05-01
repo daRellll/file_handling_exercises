@@ -4,3 +4,5 @@ class MyLifeWriter:
 
     def user_write(self, text):
         with open(self.file_name, 'a') as file:
+            text = input("Enter line: ")
+            
